@@ -9,6 +9,8 @@ import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import { Switch, Route } from 'react-router-dom';
+import {Grid} from "semantic-ui-react"
+import AppsList from "./AppsList"
 
 class App extends Component {
   render() {
@@ -24,6 +26,15 @@ class App extends Component {
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>
+        <Grid>
+          <Grid.Row>
+            <Grid.Column mobile={16} tablet={16} computer={4}>
+            </Grid.Column>
+            <Grid.Column mobile={16} tablet={16} computer={10}>
+              <AppsList/>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </div>
     );
   }

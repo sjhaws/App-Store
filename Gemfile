@@ -30,6 +30,7 @@ gem 'devise'
 gem 'devise_token_auth'
 group :development, :test do
   gem 'pry'
+  gem "faker"
 end
 
 group :development do
