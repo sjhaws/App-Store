@@ -1,9 +1,15 @@
 import React from "react"
 import IApp from "./IApp"
 
-const AppsList = () => (
+const AppsList = ({apps}) => (
 <div>
-  <IApp />
+{ apps.map( app =>
+<IApp
+  key={app.id}
+  {...app}
+/>
+
+)}
 </div>
 )
 

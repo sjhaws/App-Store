@@ -1,9 +1,8 @@
 import React from "react"
 import { Card, Image, CardContent } from "semantic-ui-react"
 
-class IApp extends React.Component{
+class IApp extends React.Component {
   state = { 
-    edit: false,
     name: this.props.name,
     description: this.props.description,
     category: this.props.category,
@@ -18,7 +17,15 @@ class IApp extends React.Component{
     return(
       <Card>
         <CardContent>
+          {console.log(this.state)}
           {this.state.name}
+          <Image src={this.state.logo}/>
+          {this.state.description}
+          {this.state.category}
+          ${this.state.price}
+          {this.state.version}
+          {this.state.author}
+          {this.state.created_at}
         </CardContent>
       </Card>
     )

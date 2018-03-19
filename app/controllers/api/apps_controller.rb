@@ -2,7 +2,7 @@ class Api::AppsController < ApplicationController
   before_action :set_app, oonly: [:show, :update, :destroy]
   
   def index
-    render json: Apps.all
+    render json: App.all
   end
 
   def show
@@ -36,6 +36,6 @@ class Api::AppsController < ApplicationController
     end
 
     def app_params
-      params.require(:app).permit(:name, :description, :price, :department)
+      params.require(:app).permit(:name, :description, :category, :price, :version, :author, :logo)
     end
 end
